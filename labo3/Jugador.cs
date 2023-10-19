@@ -12,6 +12,8 @@ namespace labo3
         public string Email { get; set; }
         public string DulcesFavoritos { get; set; }
         public string RegaloIdeal { get; set; }
+        public Jugador AmigoSecreto { get; set; }
+
         public Jugador(string nombre, string email, string dulcesFavoritos, string regaloIdeal)
         {
             Nombre = nombre;

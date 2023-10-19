@@ -5,9 +5,9 @@ namespace labo3
 {
     public partial class Form2 : Form
     {
-        private Jugador[] jugadores;
+        public Jugador[] jugadores;
         private int indice = 0;
-        public Jugador jugador;
+        public Form Form3Instance { get; set; }
 
         public Form2()
         {
@@ -26,16 +26,18 @@ namespace labo3
             {
                 if (!string.IsNullOrWhiteSpace(nombreTextBox.Text) && !string.IsNullOrWhiteSpace(emailTextBox.Text) && !string.IsNullOrWhiteSpace(dulcesFavoritosTextBox.Text) && !string.IsNullOrWhiteSpace(regaloIdealTextBox.Text))
                 {
-                    if (indice < jugadores.Length)
+                    if (indice < jugadores.Length && Form3Instance != null)
                     {
                         Jugador jugador = new Jugador(nombreTextBox.Text, emailTextBox.Text, dulcesFavoritosTextBox.Text, regaloIdealTextBox.Text);
                         jugadores[indice] = jugador;
+                        ((Form1)Form3Instance).AgregarJugador(jugador); // Pasar el jugador a Form1
                         LimpiarCampos();
                         indice++;
 
                         if (indice == jugadores.Length)
                         {
                             MessageBox.Show("Se han ingresado todos los jugadores.");
+                            ((Form1)Form3Instance).AgregarJugador(jugador); // Pasar el último jugador a Form1
                             this.Close();
                         }
                     }

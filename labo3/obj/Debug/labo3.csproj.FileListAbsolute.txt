@@ -1,0 +1,11 @@
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\labo3\labo3\bin\Debug\labo3.exe.config
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\labo3\labo3\bin\Debug\labo3.exe
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\labo3\labo3\bin\Debug\labo3.pdb
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\labo3\labo3\obj\Debug\labo3.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\labo3\labo3\obj\Debug\labo3.Form1.resources
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\labo3\labo3\obj\Debug\labo3.Form2.resources
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\labo3\labo3\obj\Debug\labo3.Properties.Resources.resources
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\labo3\labo3\obj\Debug\labo3.csproj.GenerateResource.cache
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\labo3\labo3\obj\Debug\labo3.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\labo3\labo3\obj\Debug\labo3.exe
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\labo3\labo3\obj\Debug\labo3.pdb

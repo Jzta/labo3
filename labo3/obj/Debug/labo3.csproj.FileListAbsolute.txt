@@ -23,3 +23,15 @@ C:\Users\Liceth\source\repos\Labo 3.0\labo3\obj\Debug\labo3.csproj.GenerateResou
 C:\Users\Liceth\source\repos\Labo 3.0\labo3\obj\Debug\labo3.csproj.CoreCompileInputs.cache
 C:\Users\Liceth\source\repos\Labo 3.0\labo3\obj\Debug\labo3.exe
 C:\Users\Liceth\source\repos\Labo 3.0\labo3\obj\Debug\labo3.pdb
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\lab 3 con diseño\labo3\bin\Debug\labo3.exe.config
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\lab 3 con diseño\labo3\bin\Debug\labo3.exe
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\lab 3 con diseño\labo3\bin\Debug\labo3.pdb
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\lab 3 con diseño\labo3\obj\Debug\labo3.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\lab 3 con diseño\labo3\obj\Debug\labo3.Form1.resources
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\lab 3 con diseño\labo3\obj\Debug\labo3.Form2.resources
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\lab 3 con diseño\labo3\obj\Debug\labo3.Form3.resources
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\lab 3 con diseño\labo3\obj\Debug\labo3.Properties.Resources.resources
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\lab 3 con diseño\labo3\obj\Debug\labo3.csproj.GenerateResource.cache
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\lab 3 con diseño\labo3\obj\Debug\labo3.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\lab 3 con diseño\labo3\obj\Debug\labo3.exe
+C:\Users\hp\Desktop\C# REGISTRO ESTUDIO\lab 3 con diseño\labo3\obj\Debug\labo3.pdb

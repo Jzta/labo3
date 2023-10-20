@@ -5,15 +5,16 @@ namespace labo3
 {
     public partial class Form1 : Form
     {
-        private AmigoSecreto amigoSecreto;
+        public AmigoSecreto amigoSecreto;
         private Jugador[] jugadores;
-        private int cantidadDeJugadores;
+        public int cantidadDeJugadores;
         private DateTime fechaInicio;
         private DateTime fechaFin;
         private int numeroDeEndulzadas;
         private int frecuenciaDeEndulzadasEnDias;
         private float valorDeLaEndulzada;
         private float valorDelRegalo;
+
 
 
         public Form1()
@@ -26,7 +27,7 @@ namespace labo3
 
         }
 
-        private bool ValidarCampos()
+        public bool ValidarCampos()
         {
             if (jugadoresNumericUpDown.Value <= 0 ||
                 string.IsNullOrWhiteSpace(valorEndulzadaTextBox.Text) ||
@@ -42,13 +43,13 @@ namespace labo3
         {
             if (ValidarCampos())
             {
-                int cantidadDeJugadores = (int)jugadoresNumericUpDown.Value;
-                DateTime fechaInicio = dateTimePicker1.Value;
-                DateTime fechaFin = dateTimePicker2.Value;
-                int numeroDeEndulzadas = (int)endulzadasNumericUpDown.Value;
-                int frecuenciaDeEndulzadasEnDias = (int)frecuenciaNumericUpDown.Value;
-                float valorDeLaEndulzada = float.Parse(valorEndulzadaTextBox.Text);
-                float valorDelRegalo = float.Parse(valorRegaloTextBox.Text);
+                cantidadDeJugadores = (int)jugadoresNumericUpDown.Value;
+                fechaInicio = dateTimePicker1.Value;
+                fechaFin = dateTimePicker2.Value;
+                numeroDeEndulzadas = (int)endulzadasNumericUpDown.Value;
+                frecuenciaDeEndulzadasEnDias = (int)frecuenciaNumericUpDown.Value;
+                valorDeLaEndulzada = float.Parse(valorEndulzadaTextBox.Text);
+                valorDelRegalo = float.Parse(valorRegaloTextBox.Text);
 
                 jugadores = new Jugador[cantidadDeJugadores]; // Inicializa el arreglo de jugadores
 
@@ -69,13 +70,20 @@ namespace labo3
                     if (form2.jugadores != null)
                     {
                         jugadores[i] = form2.jugadores[i];
+                        amigoSecreto.AgregarJugador(jugadores[i]); // Agrega el jugador a AmigoSecreto
                         Console.WriteLine($"Datos del jugador {i + 1}:");
                         Console.WriteLine($"Nombre: {jugadores[i].Nombre}");
                         Console.WriteLine($"Email: {jugadores[i].Email}");
                         Console.WriteLine($"Dulces favoritos: {jugadores[i].DulcesFavoritos}");
                         Console.WriteLine($"Regalo ideal: {jugadores[i].RegaloIdeal}");
                         Console.WriteLine();
+
                     }
+
+                    form2.CantidadDeJugadores = cantidadDeJugadores;
+                    form2.FechaInicio = fechaInicio;
+                    form2.FechaFin = fechaFin;
+                    
                 }
             }
         }

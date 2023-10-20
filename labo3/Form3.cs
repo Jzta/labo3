@@ -12,25 +12,13 @@ namespace labo3
 {
     public partial class Form3 : Form
     {
-        public void ImprimirInformacionJuego(AmigoSecreto amigoSecreto)
-        {
-            // Aquí puedes acceder a las propiedades de amigoSecreto para imprimir la información del juego
-            Console.WriteLine("Información del juego:");
-            Console.WriteLine($"Cantidad de jugadores: {amigoSecreto.CantidadDeJugadores}");
-            Console.WriteLine($"Fecha de inicio: {amigoSecreto.FechaInicio}");
-            Console.WriteLine($"Fecha de fin: {amigoSecreto.FechaFin}");
-            // ... y así sucesivamente para otras propiedades relevantes
-
-            // También puedes considerar la opción de mostrar esta información en algún control visual como un cuadro de texto o un control de cuadrícula si estás utilizando una aplicación de Windows Forms
-        }
-
         private Jugador[] jugadores;
         private int indice = 0;
 
         public Form3()
         {
             InitializeComponent();
-            jugadores = new Jugador[10]; // Por ejemplo, inicializamos el vector con tamaño 10
+            jugadores = new Jugador[10]; // Inicializa el vector con un tamaño de 10
             InitializeDataGridView();
         }
 
@@ -63,6 +51,11 @@ namespace labo3
             }
         }
 
-        
+        // Método para imprimir la información del juego en el Form3
+        public void ImprimirInformacionJuego()
+        {
+            // Implementa la lógica para imprimir la información del juego aquí
+            MessageBox.Show("Imprimir información del juego aquí.");
+        }
     }
 }

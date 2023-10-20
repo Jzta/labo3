@@ -7,6 +7,13 @@ namespace labo3
     {
         public Jugador[] jugadores;
         private int indice = 0;
+        int cantidadDeJugadores = 10;
+        DateTime fechaInicio = new DateTime(2023, 10, 1);
+        DateTime fechaFin = new DateTime(2023, 10, 31);
+        int numeroDeEndulzadas = 5;
+        int frecuenciaDeEndulzadasEnDias = 7;
+        float valorDeLaEndulzada = 2.5f;
+        float valorDelRegalo = 30.0f;
         public Form Form3Instance { get; set; }
 
         public Form2()
@@ -20,7 +27,7 @@ namespace labo3
             jugadores = new Jugador[cantidadJugadores];
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             if (nombreTextBox != null && emailTextBox != null && dulcesFavoritosTextBox != null && regaloIdealTextBox != null)
             {
@@ -34,10 +41,18 @@ namespace labo3
                         LimpiarCampos();
                         indice++;
 
+                        AmigoSecreto amigoSecreto = new AmigoSecreto(cantidadDeJugadores, fechaInicio, fechaFin, numeroDeEndulzadas,
+                                             frecuenciaDeEndulzadasEnDias, valorDeLaEndulzada, valorDelRegalo, jugadores);
+
                         if (indice == jugadores.Length)
                         {
                             MessageBox.Show("Se han ingresado todos los jugadores.");
                             ((Form1)Form3Instance).AgregarJugador(jugador); // Pasar el último jugador a Form1
+
+                            Form3 form3 = new Form3();
+                            form3.ImprimirInformacionJuego(amigoSecreto);
+                            form3.Show();
+
                             this.Close();
                         }
                     }

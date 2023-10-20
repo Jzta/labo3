@@ -7,6 +7,14 @@ namespace labo3
     {
         private AmigoSecreto amigoSecreto;
         private Jugador[] jugadores;
+        private int cantidadDeJugadores;
+        private DateTime fechaInicio;
+        private DateTime fechaFin;
+        private int numeroDeEndulzadas;
+        private int frecuenciaDeEndulzadasEnDias;
+        private float valorDeLaEndulzada;
+        private float valorDelRegalo;
+
 
         public Form1()
         {
@@ -30,7 +38,7 @@ namespace labo3
             return true;
         }
 
-        private void CrearJuego_Click(object sender, EventArgs e)
+        public void CrearJuego_Click(object sender, EventArgs e)
         {
             if (ValidarCampos())
             {

@@ -8,7 +8,6 @@ namespace labo3
 {
     public class AmigoSecreto
     {
-
         private int cantidadDeJugadores;
         private DateTime fechaInicio;
         private DateTime fechaFin;
@@ -17,7 +16,10 @@ namespace labo3
         private float valorDeLaEndulzada;
         private float valorDelRegalo;
         private Jugador[] jugadores;
-        private Jugador[] jugador;
+
+        public int CantidadDeJugadores { get; private set; }
+        public DateTime FechaInicio { get; private set; }
+        public DateTime FechaFin { get; private set; }
 
         public AmigoSecreto(int cantidadDeJugadores, DateTime fechaInicio, DateTime fechaFin, int numeroDeEndulzadas,
                             int frecuenciaDeEndulzadasEnDias, float valorDeLaEndulzada, float valorDelRegalo, Jugador[] jugadores)
@@ -30,93 +32,32 @@ namespace labo3
             this.valorDeLaEndulzada = valorDeLaEndulzada;
             this.valorDelRegalo = valorDelRegalo;
             this.jugadores = jugadores;
-            this.jugadores = new Jugador[cantidadDeJugadores];
-            this.jugador = new Jugador[cantidadDeJugadores];
         }
 
         public void AsignarJugadores(int cantidadDeJugadores)
         {
-            for (int i = 0; i < cantidadDeJugadores; i++)
-            {
-                if (i < jugadores.Length && i < jugador.Length)
-                {
-                    jugadores[i] = jugador[i];
-                }
-            }
+            // Implementa la lógica para asignar jugadores aquí
         }
 
         public void AsignarAmigosSecretos()
         {
-            // Lógica para asignar amigos secretos
-            Random random = new Random();
-
-            // Creamos una lista de índices para mantener un registro de los índices utilizados
-            List<int> indicesUtilizados = new List<int>();
-
-            // Iteramos sobre los jugadores para asignar amigos secretos
-            for (int i = 0; i < jugador.Length; i++)
-            {
-                int indiceAmigoSecreto;
-
-                do
-                {
-                    // Seleccionamos un índice aleatorio que no haya sido utilizado antes
-                    indiceAmigoSecreto = random.Next(0, jugador.Length);
-                } while (indicesUtilizados.Contains(indiceAmigoSecreto) || indiceAmigoSecreto == i);
-
-                // Asignamos el amigo secreto
-                jugador[i].AmigoSecreto = jugador[indiceAmigoSecreto];
-                indicesUtilizados.Add(indiceAmigoSecreto);
-            }
+            // Implementa la lógica para asignar amigos secretos aquí
         }
 
         public void ImprimirInformacionDelJuego()
         {
-            Console.WriteLine("Información del juego:");
-            Console.WriteLine($"Cantidad de jugadores: {cantidadDeJugadores}");
-            Console.WriteLine($"Fecha de inicio: {fechaInicio}");
-            Console.WriteLine($"Fecha de fin: {fechaFin}");
-            Console.WriteLine($"Número de endulzadas: {numeroDeEndulzadas}");
-            Console.WriteLine($"Frecuencia de endulzadas en días: {frecuenciaDeEndulzadasEnDias}");
-            Console.WriteLine($"Valor de la endulzada: {valorDeLaEndulzada}");
-            Console.WriteLine($"Valor del regalo: {valorDelRegalo}");
-
-            for (int i = 0; i < cantidadDeJugadores; i++)
-            {
-                Console.WriteLine($"Jugador {jugadores[i].Nombre} le dará un regalo a {jugadores[i].AmigoSecreto.Nombre}.");
-            }
+            // Implementa la lógica para imprimir la información del juego aquí
         }
 
         public void ImprimirGustosDeJugadores()
         {
-            Console.WriteLine("Gustos de los jugadores:");
-            for (int i = 0; i < cantidadDeJugadores; i++)
-            {
-                Console.WriteLine($"Jugador {jugadores[i].Nombre}:");
-                Console.WriteLine($"Dulces favoritos: {jugadores[i].DulcesFavoritos}");
-                Console.WriteLine($"Regalo ideal: {jugadores[i].RegaloIdeal}");
-                Console.WriteLine();
-            }
+            // Implementa la lógica para imprimir los gustos de cada jugador aquí
         }
 
         public int CalcularProximaEndulzada(DateTime fecha)
         {
-            TimeSpan diferencia = fechaFin - fechaInicio;
-            int totalDias = diferencia.Days;
-            int endulzadasRestantes = numeroDeEndulzadas;
-
-            int frecuenciaEnDias = frecuenciaDeEndulzadasEnDias;
-            int endulzadasPosibles = totalDias / frecuenciaEnDias;
-
-            if (endulzadasPosibles < endulzadasRestantes)
-            {
-                return endulzadasPosibles;
-            }
-            else
-            {
-                return endulzadasRestantes;
-            }
+            // Implementa la lógica para calcular la próxima endulzada aquí
+            return 0; // Solo para cumplir con la sintaxis
         }
-
     }
 }

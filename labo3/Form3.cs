@@ -12,6 +12,18 @@ namespace labo3
 {
     public partial class Form3 : Form
     {
+        public void ImprimirInformacionJuego(AmigoSecreto amigoSecreto)
+        {
+            // Aquí puedes acceder a las propiedades de amigoSecreto para imprimir la información del juego
+            Console.WriteLine("Información del juego:");
+            Console.WriteLine($"Cantidad de jugadores: {amigoSecreto.CantidadDeJugadores}");
+            Console.WriteLine($"Fecha de inicio: {amigoSecreto.FechaInicio}");
+            Console.WriteLine($"Fecha de fin: {amigoSecreto.FechaFin}");
+            // ... y así sucesivamente para otras propiedades relevantes
+
+            // También puedes considerar la opción de mostrar esta información en algún control visual como un cuadro de texto o un control de cuadrícula si estás utilizando una aplicación de Windows Forms
+        }
+
         private Jugador[] jugadores;
         private int indice = 0;
 
@@ -50,5 +62,7 @@ namespace labo3
                 MessageBox.Show("Se ha alcanzado el límite de jugadores.");
             }
         }
+
+        
     }
 }

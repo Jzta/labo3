@@ -84,5 +84,10 @@ namespace labo3
         {
             Console.WriteLine($"Jugador {jugador.Nombre} agregado correctamente.");
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
